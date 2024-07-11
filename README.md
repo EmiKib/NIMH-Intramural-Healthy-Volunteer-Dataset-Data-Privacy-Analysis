@@ -1,11 +1,11 @@
 ## Data privacy analysis of The National Institute of Mental Health (NIMH) Intramural Healthy Volunteer Dataset https://openneuro.org/datasets/ds004215/versions/1.0.3
 
 The data can be viewed as 3 different entities, with its respective individual datasets: 
-<small>
+
 1. Preliminary Online Screening Questionnaires + participants.tsv
 
-- participants.tsv
-  - Quasi-Identifers that together can be used to identify an individual :heavy_exclamation_mark:
+- <small>participants.tsv<small>
+  - <small>Quasi-Identifers that together can be used to identify an individual :heavy_exclamation_mark:<small>
 
 - Alcohol Use Disorders Identification Test (AUDIT)	audit.tsv
   - A sensitive attributes that could potentially be harming for the participant in an event of a data breach ❗
