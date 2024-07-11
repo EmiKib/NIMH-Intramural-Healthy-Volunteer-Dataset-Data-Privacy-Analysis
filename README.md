@@ -32,9 +32,11 @@ The data can be viewed as 3 different entities, with its respective individual d
 
 - World Health Organization Disability Assessment Schedule 2.0 (WHODAS 2.0)	whodas.tsv
   - Subjective disability assessment pose limited risk to data breach :white_check_mark:
-<small>
 
 
+
+
+_______________________________________________________________________________________________________________________________________________________________________
 
 
 
