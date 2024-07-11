@@ -9,9 +9,10 @@ The data can be viewed as 3 different entities:
 - Demographics	demographics.tsv
   
 - Drug Use Questionnaire	drug_use.tsv
+    - A sensitive attribute that could potentially be harming for the participant in occurence of a data breach :heavy_exclamation_mark:
 
 - Edinburgh Handedness Inventory (EHI)	ehi.tsv
-  -  (Nothing to do here it is a score set that determines handedness which is already included as a varible in itself) :white_check_mark:
+  -  Nothing to do here, handedness is already included as a varible in itself) :white_check_mark:
      
 - Health History Questions	health_history_questions.tsv
   
