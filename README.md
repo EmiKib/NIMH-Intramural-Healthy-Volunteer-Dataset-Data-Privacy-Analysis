@@ -7,8 +7,7 @@ The data can be viewed as 3 different entities:
 - Alcohol Use Disorders Identification Test (AUDIT)	audit.tsv
 - Demographics	demographics.tsv
 - Drug Use Questionnaire	drug_use.tsv
-- Edinburgh Handedness Inventory (EHI)	ehi.tsv 
-- (Nothing to do here it is a score set that determines handedness which is already included as a varible in itself) 
+- Edinburgh Handedness Inventory (EHI)	ehi.tsv (Nothing to do here it is a score set that determines handedness which is already included as a varible in itself) 
 - Health History Questions	health_history_questions.tsv
 - Health Rating	health_rating.tsv
 - Mental Health Questions	mental_health_questions.tsv
