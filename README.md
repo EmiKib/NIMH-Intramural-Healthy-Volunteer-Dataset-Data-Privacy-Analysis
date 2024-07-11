@@ -1,7 +1,7 @@
 ## Data privacy analysis of The National Institute of Mental Health (NIMH) Intramural Healthy Volunteer Dataset https://openneuro.org/datasets/ds004215/versions/1.0.3
 
 The data can be viewed as 3 different entities, with its respective individual datasets: 
-
+<small>
 1. Preliminary Online Screening Questionnaires + participants.tsv
 
 - participants.tsv
@@ -31,7 +31,7 @@ The data can be viewed as 3 different entities, with its respective individual d
 
 - World Health Organization Disability Assessment Schedule 2.0 (WHODAS 2.0)	whodas.tsv
   - Subjective disability assessment pose limited risk to data breach :white_check_mark:
-
+<small>
 
 
 
