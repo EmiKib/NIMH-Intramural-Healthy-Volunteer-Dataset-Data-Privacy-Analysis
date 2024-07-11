@@ -36,7 +36,7 @@ The data can be viewed as 3 different entities, with its respective individual d
 
 
 
-<span style="font-size:0.5em;">Text goes here</span>
+
 
 
 
