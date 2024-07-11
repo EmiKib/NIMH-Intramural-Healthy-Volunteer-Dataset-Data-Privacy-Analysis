@@ -20,6 +20,7 @@ The data can be viewed as 3 different entities, with its respective individual d
   -  Nothing to do here, handedness is already included as a varible in itself) :white_check_mark:
      
 - Health History Questions	health_history_questions.tsv
+  - A mix of quasi & sensitive-indentifers ❗
   
 - Health Rating	health_rating.tsv
 
