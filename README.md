@@ -7,6 +7,7 @@ The data can be viewed as 3 different entities, with its respective individual d
 - Alcohol Use Disorders Identification Test (AUDIT)	audit.tsv
 
 - Demographics	demographics.tsv
+    - Quasi-Identifers that together can be used to identify an individual :heavy_exclamation_mark:
   
 - Drug Use Questionnaire	drug_use.tsv
     - A sensitive attributes that could potentially be harming for the participant in an event of a data breach :heavy_exclamation_mark:
