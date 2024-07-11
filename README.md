@@ -11,7 +11,7 @@ The data can be viewed as 3 different entities:
 - Drug Use Questionnaire	drug_use.tsv
 
 - Edinburgh Handedness Inventory (EHI)	ehi.tsv
-  -  **Attention:** (Nothing to do here it is a score set that determines handedness which is already included as a varible in itself)
+  -  (Nothing to do here it is a score set that determines handedness which is already included as a varible in itself) :white_check_mark:
      
 - Health History Questions	health_history_questions.tsv
   
