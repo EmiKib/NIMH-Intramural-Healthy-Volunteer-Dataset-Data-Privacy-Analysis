@@ -23,10 +23,12 @@ The data can be viewed as 3 different entities, with its respective individual d
   - A mix of quasi & sensitive-indentifers ❗
   
 - Health Rating	health_rating.tsv
-  - Subjective rate of how a subject would rate their health pose no data risk :white_check_mark:
+  - Subjective score of how a subject would rate their health pose no data risk :white_check_mark:
 
 - Mental Health Questions	mental_health_questions.tsv
-- 
+  - Subjective score of how a subject would rate their mental health pose no data risk :white_check_mark:
+    
+
 - World Health Organization Disability Assessment Schedule 2.0 (WHODAS 2.0)	whodas.tsv
 
 
