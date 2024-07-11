@@ -4,7 +4,7 @@ The data can be viewed as 3 different entities, with its respective individual d
 
 1. Preliminary Online Screening Questionnaires + participants.tsv
 
-- <small>participants.tsv<small>
+<small>- participants.tsv<small>
   - <small>Quasi-Identifers that together can be used to identify an individual :heavy_exclamation_mark:<small>
 
 - Alcohol Use Disorders Identification Test (AUDIT)	audit.tsv
