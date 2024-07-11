@@ -1,4 +1,4 @@
-# Data privacy analysis of The National Institute of Mental Health (NIMH) Intramural Healthy Volunteer Dataset https://openneuro.org/datasets/ds004215/versions/1.0.3
+## Data privacy analysis of The National Institute of Mental Health (NIMH) Intramural Healthy Volunteer Dataset https://openneuro.org/datasets/ds004215/versions/1.0.3
 
 The data can be viewed as 3 different entities: 
 
@@ -9,10 +9,10 @@ The data can be viewed as 3 different entities:
 - Drug Use Questionnaire	drug_use.tsv
 - Edinburgh Handedness Inventory (EHI)	ehi.tsv 
 - (Nothing to do here it is a score set that determines handedness which is already included as a varible in itself) 
-Health History Questions	health_history_questions.tsv
-Health Rating	health_rating.tsv
-Mental Health Questions	mental_health_questions.tsv
-World Health Organization Disability Assessment Schedule 2.0 (WHODAS 2.0)	whodas.tsv
+- Health History Questions	health_history_questions.tsv
+- Health Rating	health_rating.tsv
+- Mental Health Questions	mental_health_questions.tsv
+- World Health Organization Disability Assessment Schedule 2.0 (WHODAS 2.0)	whodas.tsv
 
 
 For this part of the data 
