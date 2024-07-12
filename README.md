@@ -1,4 +1,4 @@
-<p style="font-size: 16px;">Your content here</p>
+
 
 ## Data privacy analysis of The National Institute of Mental Health (NIMH) Intramural Healthy Volunteer Dataset https://openneuro.org/datasets/ds004215/versions/1.0.3
 
@@ -17,29 +17,32 @@ The data can be viewed as 3 different entities, with its respective individual d
 - #### Demographics	demographics.tsv
     - Quasi-Identifers that together can be used to identify an individual :heavy_exclamation_mark:
       
-** Variables remaning after anonymization 6. **
+**Variables remaning after anonymization 6.**
 
-Participant_id: hashkey for an individual 
-age: Here Laplacian noise have been added.
-sex: numerical value 2 = Female, 1 = Male. 
-Handedness: 1,2,3 left, right Ambidexterity respectively.
+###### Participant_id: hashkey for an individual 
+###### age: Here Laplacian noise have been added.
+###### sex: numerical value 2 = Female, 1 = Male. 
+###### Handedness: 1,2,3 left, right Ambidexterity respectively.
 
-RACE_1: 4 entries had different answers between the original variables (RACE_1, RACE_1_2, RACE_1_3, RACE_1_4, RACE_1_SPFY)
-Hence only a retainment of the first of the race variables have been kept, in effort to commply with k-anonimity. 
+###### RACE_1: 4 entries had different answers between the original variables (RACE_1, RACE_1_2, RACE_1_3, RACE_1_4, RACE_1_SPFY) Hence only a retainment of the first of the race variables have been kept, in effort to comply with k-anonimity. 
 
-The RACE variable originally contained 7 levels: 
-
-"Levels": {
-            "1": "American Indian/Alaska Native",
-            "2": "Asian",
-            "3": "Hawaiian/Pacific Islander",
-            "4": "Black/African American",
-            "5": "White/Caucasian",
-            "6": "Multiple race",
-            "7": "Unknown"
-        }
+###### The RACE variable originally contained 7 categories: 
 
 
+###### "Levels": {
+######            "1": "American Indian/Alaska Native",
+######            "2": "Asian",
+######            "3": "Hawaiian/Pacific Islander",
+######           "4": "Black/African American",
+######           "5": "White/Caucasian",
+######            "6": "Multiple race",
+######            "7": "Unknown"
+######        }
+
+###### After generalising, 2 categories remain Caucasian = 5 , Non-Caucasian = 0
+
+
+###### Bilingual: Originally the dataset contained the variables LANGUAGES and OTHER_LANGUAGES this has been made into 1 column stating if the subject is bilingual or not. 
 
 
   
