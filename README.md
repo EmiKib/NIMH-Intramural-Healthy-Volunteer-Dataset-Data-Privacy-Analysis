@@ -7,12 +7,39 @@ The data can be viewed as 3 different entities, with its respective individual d
 
 - #### participants.tsv
   - Quasi-Identifers that together can be used to identify an individual :heavy_exclamation_mark:
+ 
 
 - #### Alcohol Use Disorders Identification Test (AUDIT)	audit.tsv
   - A sensitive attributes that could potentially be harming for the participant in an event of a data breach ❗
 
 - #### Demographics	demographics.tsv
     - Quasi-Identifers that together can be used to identify an individual :heavy_exclamation_mark:
+      
+** Variables remaning after anonymization 6. **
+
+Participant_id: hashkey for an individual 
+age: Here Laplacian noise have been added.
+sex: numerical value 2 = Female, 1 = Male. 
+Handedness: 1,2,3 left, right Ambidexterity respectively.
+
+RACE_1: 4 entries had different answers between the original variables (RACE_1, RACE_1_2, RACE_1_3, RACE_1_4, RACE_1_SPFY)
+Hence only a retainment of the first of the race variables have been kept, in effort to commply with k-anonimity. 
+
+The RACE variable originally contained 7 levels: 
+
+"Levels": {
+            "1": "American Indian/Alaska Native",
+            "2": "Asian",
+            "3": "Hawaiian/Pacific Islander",
+            "4": "Black/African American",
+            "5": "White/Caucasian",
+            "6": "Multiple race",
+            "7": "Unknown"
+        }
+
+
+
+
   
 - #### Drug Use Questionnaire	drug_use.tsv
     - A sensitive attributes that could potentially be harming for the participant in an event of a data breach :heavy_exclamation_mark:
