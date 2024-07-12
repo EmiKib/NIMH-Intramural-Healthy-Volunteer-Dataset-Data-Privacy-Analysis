@@ -1,3 +1,5 @@
+<sub><sup>combining the two tags</sup></sub>
+
 ## Data privacy analysis of The National Institute of Mental Health (NIMH) Intramural Healthy Volunteer Dataset https://openneuro.org/datasets/ds004215/versions/1.0.3
 
 The data can be viewed as 3 different entities, with its respective individual datasets: 
