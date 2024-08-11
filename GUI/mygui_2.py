@@ -48,6 +48,7 @@ class FileAnalyzer(QMainWindow):
         self.original_data = pd.DataFrame()  # To store the original data for reverting changes
         self.original_columns = {}  # To store the original data of individual columns
         self.combined_values = {} 
+        self.combined_values_history = {}  
         
         # Initialize main UI elements
         self.initUI()
@@ -165,7 +166,6 @@ class FileAnalyzer(QMainWindow):
 
 
     def combine_selected_values(self, column_name, selected_items):
-        # Get the selected values
         selected_values = [item.text() for item in selected_items]
 
         if len(selected_values) < 2:
@@ -180,10 +180,14 @@ class FileAnalyzer(QMainWindow):
         replacement_value = QInputDialog.getText(self, "Combine Values", "Enter the new value for the selected items:")
         
         if replacement_value[1]:  # Check if the user clicked OK and provided a value
+            if column_name not in self.combined_values_history:
+                self.combined_values_history[column_name] = []
+            self.combined_values_history[column_name].append((selected_values, replacement_value[0]))
             self.data[column_name] = self.data[column_name].replace(selected_values, replacement_value[0])
-            self.combined_values[column_name] = (selected_values, replacement_value[0])  # Store combined values
             self.show_preview()  # Refresh the preview to show updated data
             QMessageBox.information(self, "Success", "Values have been successfully combined.")
+
+
 
 
     def add_buttons(self, layout):
@@ -318,35 +322,30 @@ class FileAnalyzer(QMainWindow):
         # Add the column name as the root node
         G.add_node(column_name)
 
-        # Use combined values if available
-        if column_name in self.combined_values:
-            combined_values, replacement_value = self.combined_values[column_name]
-            
-            # Add the new consolidated value node
-            G.add_node(replacement_value)
-            # Add edges from root node to the new consolidated value
-            G.add_edge(column_name, replacement_value)
-            
-            # Add edges from the new consolidated value to the original values
-            for value in combined_values:
-                if pd.notna(value):
-                    G.add_node(value)  # Ensure node is added before creating edge
-                    G.add_edge(replacement_value, value)
-        else:
-            # Add the unique values and connect them to the root
-            unique_values = self.data[column_name].unique()
-            for value in unique_values:
-                if pd.notna(value):
-                    G.add_node(value)  # Ensure node is added before creating edge
-                    G.add_edge(column_name, value)
+        # Track nodes and edges to add
+        nodes_to_add = set()
+        edges_to_add = set()
+
+        # Process all combined values from history for the column
+        if column_name in self.combined_values_history:
+            for combined_values, replacement_value in self.combined_values_history[column_name]:
+                nodes_to_add.add(replacement_value)
+                edges_to_add.add((column_name, replacement_value))
+                for value in combined_values:
+                    if pd.notna(value):
+                        nodes_to_add.add(value)
+                        edges_to_add.add((replacement_value, value))
 
         # Ensure that all unique values are added, even if they are not part of the combined values
         unique_values = self.data[column_name].unique()
         for value in unique_values:
             if pd.notna(value) and value not in G.nodes:
                 G.add_node(value)
-                if column_name not in [n for n, d in G.in_edges(value)]:
-                    G.add_edge(column_name, value)
+                G.add_edge(column_name, value)
+
+        # Add nodes and edges to the graph
+        G.add_nodes_from(nodes_to_add)
+        G.add_edges_from(edges_to_add)
 
         # Get positions for the nodes in the graph using graphviz_layout
         pos = nx.drawing.nx_agraph.graphviz_layout(G, prog='dot')  # 'dot' is used for hierarchical layout
